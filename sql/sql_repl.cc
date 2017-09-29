@@ -885,7 +885,7 @@ get_binlog_list(MEM_ROOT *memroot)
   so, it means we have reached the point to start from, as no GTID events can
   exist in earlier binlogs.
 */
-static const char *
+const char *
 get_gtid_list_event(IO_CACHE *cache, Gtid_list_log_event **out_gtid_list)
 {
   Format_description_log_event init_fdle(BINLOG_VERSION);

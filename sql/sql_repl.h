@@ -83,6 +83,9 @@ int rpl_load_gtid_state(slave_connection_state *state, bool use_binlog);
 bool rpl_gtid_pos_check(THD *thd, char *str, size_t len);
 bool rpl_gtid_pos_update(THD *thd, char *str, size_t len);
 
+class Gtid_list_log_event;
+const char *
+get_gtid_list_event(IO_CACHE *cache, Gtid_list_log_event **out_gtid_list);
 #else
 
 struct LOAD_FILE_IO_CACHE : public IO_CACHE { };

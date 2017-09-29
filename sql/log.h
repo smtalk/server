@@ -755,7 +755,7 @@ public:
   int update_log_index(LOG_INFO* linfo, bool need_update_threads);
   int rotate(bool force_rotate, bool* check_purge);
   void checkpoint_and_purge(ulong binlog_id);
-  int rotate_and_purge(bool force_rotate);
+  int rotate_and_purge(bool force_rotate, DYNAMIC_ARRAY* drop_gtid_domain= NULL);
   /**
      Flush binlog cache and synchronize to disk.
 
